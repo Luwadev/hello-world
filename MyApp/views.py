@@ -1,5 +1,6 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic import TodayArchiveView
 
-def homePageView(request):
-    return HttpResponse('Hello Wor;d, I am now a django developer!')
+
+class HomePageView(TemplateView):
+    template_name = 'home.html'
+
